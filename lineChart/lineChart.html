@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Line Chart Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="lineChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+    <h1 class="title" >Apple Stock Price Over 5 Years</h1>
+    
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        Line charts allow viewers to quickly and easily see data trends across time. This chart shows the increase in Apple's stock price since late 2015.
+        Information was retrieved from 
+        <a href="https://finance.yahoo.com/quote/AAPL/history?period1=1445731200&period2=1603584000&interval=1mo&filter=history&frequency=1mo&includeAdjustedClose=true">here</a>
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      The marks for a line chart are quite simple, as they consist mostly of a singular line marking the change over time. 
+    </p>
+    <p>
+      The channels of a line chart are also quite simple; it mainly includes the position of the line. Since the chart is a continous description of change over time, at each
+      interval on the x axis we change the target position and then interpolate the line between these points. Line charts can also include color or stroke, however these 
+      changes are not typicall necessary to increase the understanding of a line chart, and serve mostly for aesthetic purposes. 
+    </p>
+    <p id="bottom">
+      Line charts are an increadibly universal charting type, mostly because of their simplicity and effectiveness. Line charts allow us to quickly see trends over time, and 
+      plan accordingly. When looking at a company's stocks, a simple line chart will allow the user to understand how the company is performing. Line charts can also lead to 
+      a meta narrative, seeing spikes in a companys stock value could show that the company launched a new product, or dips could show a change in leadership. Overall, while not
+      the flashiest visualization, line charts are effective because of their simplicity and ease of understanding.
+    </p>
+    <script src='./lineChart.js'></script>
+  </body>
+</html>

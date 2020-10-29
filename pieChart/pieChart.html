@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Pie Chart Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="pieChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+
+    <h1 class="title" >Comment Emotionality</h1>
+    <h3 class="type">Pie Chart</h3>
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        Services like <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-sentiment.html">
+        Amazon Comprehend</a> allow users to determine the sentiment of text.
+        Using this software we could easily see the overall sentiment of an app or post given the sentiment 
+        of the comments on it. Data visualization allow you to easily see general percentages in data, and view how they compare to one another.
+        In the hypothetical data I created, we can see that there's a diverse spread of reactions in the comments, but that there are more negative
+        or neutral comments than positive ones. Simple data graphics like this can easily be combined with other software to drastically reduce workload,
+        instead of reading all the comments to gauge a reaction, we can instead view a handy visualization like this. Although it only gives us a rough estimate, 
+        it can still be helpful in its brevity.
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      The most notable marks within the pie chart are the slices of area within the graphic. Pie charts radially divide up the area into subsections indicating the 
+      frequency of each result. This allows users to visually compare the areas against one another to determine which are most important in the dataset. 
+    </p>
+    <p>
+      Color, a channel, helps differentiate the different slices from one another; and can increase the visual appeal of the graphic. Pie charts are also quite clearly influenced
+      by shape, as the overall graph is a circle with radial slices taken out of it, instead of rectangular area like we'd see in many other graphics. We can also change the
+      ordering of the slices to position them sequentially from largest to smallest, which helps in compairing the overall areas.
+    </p>
+    <p id="bottom">
+      Pie charts shouldn't be used overly frequently, as there are better ways of compairing data than through angles or radial areas. While the graphic can be visually 
+      pleasing, there are usually better methods of displaying the data. For more information about weakness of the pie chart, read 
+      <a href="https://www.data-to-viz.com/caveat/pie.html">this article.</a>
+    </p>
+    <script src='./pieChart.js'></script>
+  </body>
+</html>
