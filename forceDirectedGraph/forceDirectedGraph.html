@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Force Directed Graph Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="forceDirectedGraph.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+
+    <h1 class="title" >Relationship Graph Example</h1>
+    <h3 class="type">Force Directed Graph</h3>
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        Forced Direction graphs allow us to display relationships between different nodes in interesting ways. In the example I created, I made each node a friend in a group of
+        friends. This person has several different friend groups with little overlap, so many of the branches of this are not connected.
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      Bar charts can either use lines or areas for their marks, however it is more common to see areas to give the bars more dimensionality, even if the actual area property isn't
+      what we're measuring.
+    </p>
+    <p>
+      The primary channel for this graph, as with all bar chart, is length. By adjusting the length of each bar we show the rate of occurances against our Y axis. Another 
+      channel important to the stacked bar chart is the position, since we're placing different bars on top of each other to show the total number of occurances across
+      several different fields. Additionally, for the stacked bar chart color is very important, as it allows us to differentiate the different pieces of each bar and reference
+      what they each mean. 
+    </p>
+    <p id="bottom">
+      Stacked bar charts are often misused to compare different pieces of data within the same timeframe, such as rates of burglary to drug instances in 2014, however these charts
+      are better used to compare the sum totals of years to one another, or the instances of a particular subsection across years. For more information,
+      <a href="https://www.smashingmagazine.com/2017/03/understanding-stacked-bar-charts/">this article</a> can be quite helpful.
+    </p>
+    <script src='./forceDirectedGraph.js'></script>
+  </body>
+</html>

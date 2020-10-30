@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Chord Chart Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="chordChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+
+    <h1 class="title" >Chord Chart</h1>
+    <h3 class="type">Chord Chart</h3>
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        Stacked bar charts allow us to compare time to the number of occurances of different types again one another. In the example above we look at
+        various types of laws RIT has enforced over the years, including Liquor Violations, Drug Violations, and Possession of Weapons, Burglary, and Sexual Assault.
+        On the y axis we track occurances per semester. Data was gotten from <a href="https://ope.ed.gov/campussafety/#/">here</a>. 
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      Bar charts can either use lines or areas for their marks, however it is more common to see areas to give the bars more dimensionality, even if the actual area property isn't
+      what we're measuring.
+    </p>
+    <p>
+      The primary channel for this graph, as with all bar chart, is length. By adjusting the length of each bar we show the rate of occurances against our Y axis. Another 
+      channel important to the stacked bar chart is the position, since we're placing different bars on top of each other to show the total number of occurances across
+      several different fields. Additionally, for the stacked bar chart color is very important, as it allows us to differentiate the different pieces of each bar and reference
+      what they each mean. 
+    </p>
+    <p id="bottom">
+      Stacked bar charts are often misused to compare different pieces of data within the same timeframe, such as rates of burglary to drug instances in 2014, however these charts
+      are better used to compare the sum totals of years to one another, or the instances of a particular subsection across years. For more information,
+      <a href="https://www.smashingmagazine.com/2017/03/understanding-stacked-bar-charts/">this article</a> can be quite helpful.
+    </p>
+    <script src='./chordChart.js'></script>
+  </body>
+</html>
