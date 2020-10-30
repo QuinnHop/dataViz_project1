@@ -22,19 +22,21 @@
     </p>
     <h3>Marks & Channels</h3>
     <p>
-      Bar charts can either use lines or areas for their marks, however it is more common to see areas to give the bars more dimensionality, even if the actual area property isn't
-      what we're measuring.
+      The marks of the Force Directed Chart consist of shapes and lines, with the shapes representing nodes and the lines being the connections between them. In this example I used
+      circles to display the nodes, however technically any shape could demonstate the node. One of the most important marks in the graphic is the lines, which are crucial for showing
+      connections between nodes.
     </p>
     <p>
-      The primary channel for this graph, as with all bar chart, is length. By adjusting the length of each bar we show the rate of occurances against our Y axis. Another 
-      channel important to the stacked bar chart is the position, since we're placing different bars on top of each other to show the total number of occurances across
-      several different fields. Additionally, for the stacked bar chart color is very important, as it allows us to differentiate the different pieces of each bar and reference
-      what they each mean. 
+      The channels of this graph type are less important than others, since a lare par of the information is displayed purely through marks. Channels can be used to increase the 
+      understanding of the graphic, such as altering the position of the nodes to place like nodes closer to each other. We are also able to change the color of the nodes to group them
+      to different clusters. In this example, I colored the different groups to match them to potential friend groups, which can help with the visual clarity. Another channel we could change
+      is the line thickness between the nodes. This strategy is often employed to show the strengths of the relationships between different nodes, however in this implementation I did
+      not include this functionality.
     </p>
     <p id="bottom">
-      Stacked bar charts are often misused to compare different pieces of data within the same timeframe, such as rates of burglary to drug instances in 2014, however these charts
-      are better used to compare the sum totals of years to one another, or the instances of a particular subsection across years. For more information,
-      <a href="https://www.smashingmagazine.com/2017/03/understanding-stacked-bar-charts/">this article</a> can be quite helpful.
+      Force Directed graph can be very helpful for displaying relationships between groups. A common usage of the chart is a social network which shows relationships between groups of
+      people. Force Directed graphs are also very interactive, since the user is able to move the nodes around and see how it effects the other nodes. Due to this, the graphs can be quite
+      popular, since they are seen as more interesting and fun to interact with.
     </p>
     <script src='./forceDirectedGraph.js'></script>
   </body>

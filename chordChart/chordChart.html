@@ -12,30 +12,29 @@
     <br/>
     <a href="../indx.html">Return Home</a>
 
-    <h1 class="title" >Chord Chart</h1>
+    <h1 class="title" >Chord Chart Example</h1>
     <h3 class="type">Chord Chart</h3>
     <svg id="chart"></svg>
     <h3>Overview:</h3>
     <p>
-        Stacked bar charts allow us to compare time to the number of occurances of different types again one another. In the example above we look at
-        various types of laws RIT has enforced over the years, including Liquor Violations, Drug Violations, and Possession of Weapons, Burglary, and Sexual Assault.
-        On the y axis we track occurances per semester. Data was gotten from <a href="https://ope.ed.gov/campussafety/#/">here</a>. 
+        The Chord chart marks connections between different groups.This graphic is popular because of its unique visual style, displaying the data radially with arcs displaying
+        relationships inside the circle. The primary goal of the Chord chart is to show the flows between different nodes of data.
     </p>
     <h3>Marks & Channels</h3>
     <p>
-      Bar charts can either use lines or areas for their marks, however it is more common to see areas to give the bars more dimensionality, even if the actual area property isn't
-      what we're measuring.
+      The marks used by the Chord Diagram consist of a series of lines or arcs inside a circle. The amount and thickness of the arcs represent the number of relationships between the
+      differnt groups, thicker arcs indicate stronger relationships.
     </p>
     <p>
-      The primary channel for this graph, as with all bar chart, is length. By adjusting the length of each bar we show the rate of occurances against our Y axis. Another 
-      channel important to the stacked bar chart is the position, since we're placing different bars on top of each other to show the total number of occurances across
-      several different fields. Additionally, for the stacked bar chart color is very important, as it allows us to differentiate the different pieces of each bar and reference
-      what they each mean. 
+      The chord diagram can be quite complex, so it is crucial that channels are used correctly to reduce the complexity of the graphic. Among the important channels for this diagram
+      are the position and thickness of the arcs. As mentioned above, the starting and ending points of the arc delineate the two groups being connected, and the width of the arc is 
+      defined by the size of the relationship. Due to the complex visuals of this chart type, we also use color to differentiate between the arcs, often using a low opacity color to 
+      aid in keeping the overlapping arcs seperate. 
     </p>
     <p id="bottom">
-      Stacked bar charts are often misused to compare different pieces of data within the same timeframe, such as rates of burglary to drug instances in 2014, however these charts
-      are better used to compare the sum totals of years to one another, or the instances of a particular subsection across years. For more information,
-      <a href="https://www.smashingmagazine.com/2017/03/understanding-stacked-bar-charts/">this article</a> can be quite helpful.
+      Chord diagrams are quite popular because of there unique apperance, however if done incorrectly they can be messy and confusing. To avoid this we use a variety of channels to 
+      clarify the graphic. For even larger sets of data we can use interactivity to further clarify the chart. The most commmon use of interactivity for this chart type is by adding 
+      highlighting to the groups, which emphasizes the current group and its connections while being moused over.
     </p>
     <script src='./chordChart.js'></script>
   </body>

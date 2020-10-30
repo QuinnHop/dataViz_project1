@@ -92,10 +92,6 @@ function initGraph() {
         .attr('width', w)
         .attr('height', h)
 
-    let colorScale = (name) => {
-        
-    }
-
     let edges = chart1.selectAll('line')
         .data(data.edges)
         .enter()
@@ -109,6 +105,8 @@ function initGraph() {
         .append('circle')
             .attr('r', 10)
             .style('fill', (d) => d.color)
+            .style('stroke', 'black')
+            .style('stroke-width', 1.5)
         .call(drag(simulation))
         
     let labels = chart1.append('g')
@@ -123,9 +121,11 @@ function initGraph() {
         .attr('transform', (d) => {return `translate(0,0)`})
 
     labels.append('text')
-        .attr("x", (d) => d.x)
-        .attr("y", (d) => d.y)
-        .attr("dy", "0.32em")
+        .attr("x", (d) => 0)
+        .attr("y", (d) => -17)
+        .attr("dy", "0.45em")
+        .attr('fill', d => d.color)
+        .style('text-anchor', 'middle')
         .text(d => d.name);
 
     simulation.on('tick', () => {

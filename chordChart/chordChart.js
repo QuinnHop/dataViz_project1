@@ -26,6 +26,8 @@ function initGraph() {
         .sortSubgroups(d3.descending)
         (data)
 
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    //chart bases
     chart1
         .datum(matrix)
         .append('g')
@@ -34,13 +36,14 @@ function initGraph() {
         .enter()
         .append('g')
         .append('path')
-            .style('fill', 'grey')
+            .style('fill', (d, i) => color(i))
             .style('stroke', 'black')
             .attr('d', d3.arc()
                 .innerRadius(200)
                 .outerRadius(210)
             );
-        
+    
+    //links between bases
     chart1
         .datum(matrix)
         .append('g')
@@ -51,7 +54,11 @@ function initGraph() {
             .attr('d', d3.ribbon()
                 .radius(200)
             )
-            .style('fill', 'green')
+            .style('fill',(d) => color(d.source.index))
+            .style('opacity', .7)
             .style('stroke', 'black')
+
+    
 }
+
 initGraph();
