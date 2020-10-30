@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Line Chart Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="stackedAreaChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+    <h1 class="title" >American Energy Production</h1>
+    <h3 class="type">Stacked Area Chart</h3>
+
+    
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        Stacked Area Charts show the culmination of several differnt factors over a period of time. While similar to the stacked bar chart, the primary difference is the continous
+        nature of this chart, allowing you to graph data over a larger period of time. This chart shows how many quadrillions of British Thermal Units are produced each year in America.
+        Information was retrieved from 
+        <a href="https://www.eia.gov/energyexplained/us-energy-facts/">here</a>
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      This charts marks consist of lines and areas to define the basic structure of the graphic. The area of each section can give us a quick idea of how prevelant that variable is
+      in the cumulative dataset. The area also allows us to visualize trends in a variable over time, to see if it increase, decreases or stays stagnant.
+    </p>
+    <p>
+      The channels for a Stacked Area chart are quite reminiscent of the stacked bar chart. Once again we see a great deal of importance placed on the height of each element, as we use
+      the height to demonstrate the value of our variable. Another important channel in our Stacked Area chart is the position. Since we're overlaying our element on top of each other,
+      it is important that we position them correctly so we can accurately gauge them against time. Finally, color is a very important channel for this type of graph. We use color in this
+      case to differentiate the various areas, and provide contrast for the graphic.
+    </p>
+    <p id="bottom">
+      Despite their similarity to the Stacked Bar Chart, the data we're able to display with this type of graphic can often be much more detailed. While we are limited to a small number
+      of vertical bars we can compare in the Stacked Bar Chart, the Stacked Area chart doesn't have such restrictions. This allows us to more easily chart continous data over larger periods
+      of time. This does mean we lose some degree of clarity as to what an individual value is at a given time, so these charts can benefit from a hover-over tooltip to give more specific
+      data. Overall, however these charts can be quite useful, especially when comparing themes and growth of multiple factors over time.
+    </p>
+    <script src='./stackedAreaChart.js'></script>
+  </body>
+  
+</html>
