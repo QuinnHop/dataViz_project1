@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Tree Graph Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="treeChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+    <h1 class="title" >Family Tree</h1>
+    <h3 class="type">Tree</h3>
+
+    
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        The tree graph is a visualization of the tree data structure. This is typically a simple visualization showing the nodes and connections between them. It bears similarities to
+        the force directed map, however the tree is typically one directional, showing a hierarchy instead of a two way relationship. 
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      The marks for the tree chart are quite simplistic, as they consist only of shapes for the nodes and lines for the links. Similar to the Force Directed graph, the tree graph is 
+      quite variable in its representations, but is generally simple.
+    </p>
+    <p>
+      The channels for this type of graphic aren't terribly vital to it's understanding. The most important channel is the position of each node and line, as they must be properly
+      positioned to imply the connections between any nodes. The position also implies the hierarchy of the data, as users precieve a flow from node to node. Beyond that, other 
+      channels can be used to increase the clarity of the data, including styling for the nodes and links through color.
+    </p>
+    <p id="bottom">
+      The tree is a common data structure, and having a visualization that properly displays it is important. Beyond that, the tree is a versatile graphic that can show various pieces
+      of hierarchical data, such as family trees or sequential data. Part of this graphic's strength comes from its simplicity, however these are also not typically the most 
+      visually appealing graphics.
+    </p>
+    <script src='./treeChart.js'></script>
+  </body>
+</html>

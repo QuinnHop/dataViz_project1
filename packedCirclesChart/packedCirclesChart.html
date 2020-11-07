@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Packed Circles Demo</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="packedCirclesChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+
+    <h1 class="title" >Sample Packed Circle Chart</h1>
+    <h3 class="type">Packed Circle Chart</h3>
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        The Packed Circle Chart is a treemap varient used to show hierarchical data. Each circle represents a branch of the tree, with subchildren represented as smaller circles
+        within it. These circles are deliniated by color and often their size scales with the value they represent. The data in this graphic is created randomly, so the graphic
+        can be updated by refreshing the page.
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      The Packed Circle Chart uses groups of circles to represent hierarchies of data. While the area of the circles can be used to mark circle value, the values of lower level circles
+      do not necessarily match with the visual area of larger circles. Within these charts the placement of these circles inside parent circles is therefore more important than the 
+      size of the circles themselves.
+    </p>
+    <p>
+      Color enables viewers to quickly match circles to their respective level in the tree, avoiding confusion on smaller circles. As mentioned above, position within the other circles
+      is quite important, as it indicates whether the circle is a child or note. Channels can be used to make this chart much more visually appealing as well, by positioning the internal
+      circles in interesting ways, such as <a href="http://infogr8.com/infographics/money-god/"> this graphic</a> (although it shows a less clear hierarchy).
+    </p>
+    <p id="bottom">
+      While these charts can be visually appealing, their usage of space is unoptimal, especially when compared to other similar data visualizations like the treemap. Overall this 
+      visualization can be a good option when aesthetics are more important than functionality.
+    </p>
+    <script src='./packedCirclesChart.js'></script>
+  </body>
+</html>

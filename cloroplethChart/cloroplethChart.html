@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>Clorophleth Chart</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="cloroplethChart.css">
+  </head>
+
+  <body>
+    <br/>
+    <a href="../indx.html">Return Home</a>
+
+    <h1 class="title" >Obesity Rates by State</h1>
+    <h3 class="type">Choropleth Chart</h3>
+    <svg id="chart"></svg>
+    <h3>Overview:</h3>
+    <p>
+        The Choropleth map is a method of data visualization wherein a map of a location is segmented into areas and those areas are colored according to some metric within the area.
+        These maps are commonly used to summarize trends in certain areas, such as election results in different states. The Choropleth map is highly applicable and easily understood,
+        making it a staple among data visualizations.
+    </p>
+    <h3>Marks & Channels</h3>
+    <p>
+      The marks of the Choropleth map are quite important, as the shapes the map is comprised of allow the user to know where the map is displaying. It is important for each section
+      of the map to be recognizable, so the user understands the signficance of the mapping. 
+    </p>
+    <p>
+      Color is among the most important channels, as it informs the viewer the intensity of each phenomena in a given area. Since Choropleth maps use the shade of color as a marker for
+      the value of each sub-segment, color is an important channel. Without color, the Choropleth map would be completely useless as a data visualization. Position is also an important 
+      channel for this graphic. We use positioning to create the physical map, mapping positions from geoJSON to our graphic to create the borders and boundries of each section. Without 
+      position, these graphics would be unrecognizable blobs of areas, unreadable by our user.
+    </p>
+    <p id="bottom">
+      Data was retreived from <a href="https://www.cdc.gov/obesity/data/prevalence-maps.html">this CDC site</a>. With a graphic even as simple as this we can quickly see why Choropleth 
+      maps are so popular: they allow us to easily see geographic trends. Choropleth maps are a common form of data visualization, useful for displaying aggregate trends of varying areas. 
+      Because they are so handy, and easily understood, it is no wonder why they are so popular.
+    </p>
+    <script src='./cloroplethChart.js'></script>
+  </body>
+</html>

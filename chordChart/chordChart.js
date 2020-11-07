@@ -5,13 +5,16 @@ let chart1;
 let xScale, yScale, cScale;
 let xAxis, yAxis;
 let xAxisGroup, yAxisGroup;
-
+let innerRadius = 200;
+let outerRadius = 210;
 data = [
-    [11975,  5871, 8916, 2868],
-    [ 1951, 10048, 2060, 6171],
-    [ 8010, 16145, 8090, 8045],
-    [ 1013,   990,  940, 6907]
+    [42,  53, 60, 24, 19], //blue node
+    [ 40, 60, 10, 19, 23], //orange node
+    [ 62, 48, 36, 14, 27], //green node
+    [ 77,   18,  38, 26, 19], //red node
+    [ 40,   32,  21, 17, 12] //purple node
 ];
+
 function initGraph() {
      //create chart
     chart1 = d3.select("#chart")
@@ -26,6 +29,10 @@ function initGraph() {
         .sortSubgroups(d3.descending)
         (data)
 
+    let arcGenerator = d3.arc()
+        .innerRadius(innerRadius)
+        .outerRadius(outerRadius);
+
     const color = d3.scaleOrdinal(d3.schemeCategory10);
     //chart bases
     chart1
@@ -34,14 +41,10 @@ function initGraph() {
         .selectAll('g')
         .data((d) => d.groups)
         .enter()
-        .append('g')
         .append('path')
             .style('fill', (d, i) => color(i))
             .style('stroke', 'black')
-            .attr('d', d3.arc()
-                .innerRadius(200)
-                .outerRadius(210)
-            );
+            .attr('d', arcGenerator);
     
     //links between bases
     chart1
@@ -58,7 +61,19 @@ function initGraph() {
             .style('opacity', .7)
             .style('stroke', 'black')
 
-    
+    chart1
+        .append('g')
+        .selectAll('text')
+        .data((d) => d.groups)
+        .enter()
+        .append('text')
+            .attr('transform', (d) => {return `translate(${arcGenerator.centroid(d)})`})
+            .attr('font-family', 'sans-serif')
+            .attr('font-size', '20px')
+            .attr('fill', 'black')
+            .attr('text-anchor', 'middle')
+            .text((d, i) => "Total: " + d.value)
+            
 }
 
 initGraph();
